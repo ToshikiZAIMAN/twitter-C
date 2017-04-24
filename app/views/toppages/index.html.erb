@@ -22,6 +22,9 @@
 <%= render 'microposts/microposts', microposts: @microposts, user: @user %>
 
     </div>
+    
+    <%= link_to 'FavoritePost', fms_user_path(@user), class: 'btn btn-lg btn-primary' %>
+    
   </div>
 <% else %>
 

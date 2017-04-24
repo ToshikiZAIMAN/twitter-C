@@ -37,6 +37,11 @@ class UsersController < ApplicationController
     @followers = @user.followers.page(params[:page])
     counts(@user)
   end
+  
+  def fms
+    @user = current_user
+    @fms = current_user.fms.page(params[:page])
+  end
 
   private
 
